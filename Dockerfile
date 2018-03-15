@@ -82,7 +82,6 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     gd-dev \
     geoip-dev \
     perl-dev \
-    openjdk8-jre-base \
     luajit-dev \
   && curl -fSL http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz \
   && curl -fSL http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz.asc  -o nginx.tar.gz.asc \
@@ -189,6 +188,7 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     libffi-dev \
     freetype-dev \
     sqlite-dev \
+    openjdk8-jre-base \
     libjpeg-turbo-dev && \
     docker-php-ext-configure gd \
       --with-gd \
