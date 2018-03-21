@@ -210,10 +210,11 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     pip install -U certbot && \
     rm -Rf /etc/nginx/nginx.conf && \
     rm -Rf /usr/local/etc/php-fpm.conf && \
-    mkdir -p /data/share/images/lanniu && \
+    mkdir -p /data/share/images/tougudashi && \
+    mkdir -p /data/share/zhenlian_pay_service && \
     mkdir -p /data/share/www/static.tougudashi.com && \
     mkdir -p /data/share/data && \
-    mkdir -p /data/zhenlian_pay_service && \
+    mkdir -p /data/logs/tougudashi && \
     chown -R nginx:nginx /data
 
 # Copy our nginx config
