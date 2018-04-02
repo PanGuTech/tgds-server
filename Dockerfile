@@ -200,7 +200,7 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     tar xfz /tmp/redis.tar.gz && \
     rm -r /tmp/redis.tar.gz && \
     mv phpredis-$PHPREDIS_VERSION /usr/src/php/ext/redis && \
-    docker-php-ext-install bcmath sockets redis pdo_mysql pdo_sqlite mysqli mcrypt gd exif intl xsl json soap dom zip opcache && \
+    docker-php-ext-install swoole bcmath sockets redis pdo_mysql pdo_sqlite mysqli mcrypt gd exif intl xsl json soap dom zip opcache && \
     docker-php-source delete && \
     mkdir -p /etc/nginx/conf.d && \
     mkdir -p /var/www/app && \
