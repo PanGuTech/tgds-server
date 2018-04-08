@@ -202,11 +202,7 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     mv phpredis-$PHPREDIS_VERSION /usr/src/php/ext/redis && \
     docker-php-ext-install sw bcmath sockets redis pdo_mysql pdo_sqlite mysqli mcrypt gd exif intl xsl json soap dom zip opcache && \
     docker-php-source delete && \
-    cd /root && pecl download swoole && \
-    tar -zxvf swoole-1* && cd swoole-1* && \
-    phpize && \
-    ./configure --enable-openssl  --enable-http2  --enable-async-redis && \
-    make && make install  && \
+    pecl install swoole  && \
     docker-php-ext-enable swoole   && \
     mkdir -p /etc/nginx/conf.d && \
     mkdir -p /var/www/app && \
